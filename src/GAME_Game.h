@@ -22,6 +22,7 @@ typedef enum {
  * The application's possible stages.        *
  *********************************************
  */
+
 enum GAME_Stage {
   MENU     = 0,
   IN_GAME  = 1
