@@ -29,6 +29,8 @@
 *.dylib
 
 # Executables
+Debug
+Release
 *.exe
 *.out
 *.app
