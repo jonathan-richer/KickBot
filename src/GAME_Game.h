@@ -35,14 +35,14 @@ enum GAME_Stage {
  * Les valeurs possibles que GAME_Init peut retourner                                    *
  * avec les codes d'erreur:                                                              *
  *     SUCESS                     : Tout va bien, tout est initialisé.                   *
- *     SDL_INIT_FAILURE           : SDL a eu un problème lors de SDL_Init.               *
+ *     INIT_SDL_FALIURE           : SDL a eu un problème lors de SDL_Init.               *
  *     WINDOW_CREATION_FAILURE    : La fenêtre n'a pas pu être initialisée.              *
  *     RENDERER_CREATION_FAILURE  : Le renderer n'a pas pu être initialisé.              *
  *****************************************************************************************
  * The possible values that GAME_Init can return                                         *
  * with the error codes associated with it:                                              *
  *     SUCESS                     : Everything is right, everything is initialized.      *
- *     SDL_INIT_FAILURE           : SDL had a problem to initialize at SDL_Init.         *
+ *     INIT_SDL_FALIURE           : SDL had a problem to initialize at SDL_Init.         *
  *     WINDOW_CREATION_FAILURE    : The window had an error during the initialization.   *
  *     RENDERER_CREATION_FAILURE  : The renderer had an error during the initialization. *
  *****************************************************************************************
@@ -50,7 +50,7 @@ enum GAME_Stage {
 
 typedef enum {
   SUCCESS                    =  0,
-  SDL_INIT_FAILURE           = -1,
+  INIT_SDL_FALIURE           = -1,
   WINDOW_CREATION_FAILURE    = -2,
   RENDERER_CREATION_FAILURE  = -3
 } GAME_INIT_ReturnCode;
