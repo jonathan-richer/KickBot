@@ -31,29 +31,29 @@ enum GAME_Stage {
 
 
 /**
- *****************************************************************************************
- * Les valeurs possibles que GAME_Init peut retourner                                    *
- * avec les codes d'erreur:                                                              *
- *     GAME_SUCESS                     : Tout va bien, tout est initialisé.                   *
- *     GAME_INIT_SDL_FALIURE           : SDL a eu un problème lors de SDL_Init.               *
- *     GAME_WINDOW_CREATION_FAILURE    : La fenêtre n'a pas pu être initialisée.              *
- *     GAME_RENDERER_CREATION_FAILURE  : Le renderer n'a pas pu être initialisé.              *
- *****************************************************************************************
- * The possible values that GAME_Init can return                                         *
- * with the error codes associated with it:                                              *
- *     GAME_SUCESS                     : Everything is right, everything is initialized.      *
- *     GAME_INIT_SDL_FALIURE           : SDL had a problem to initialize at SDL_Init.         *
- *     GAME_WINDOW_CREATION_FAILURE    : The window had an error during the initialization.   *
- *     GAME_RENDERER_CREATION_FAILURE  : The renderer had an error during the initialization. *
- *****************************************************************************************
+ ******************************************************************************************
+ * Les valeurs possibles que GAME_Init peut retourner                                     *
+ * avec les codes d'erreur:                                                               *
+ *     GAME_INIT_SUCESS            : Tout va bien, tout est initialisé.                   *
+ *     GAME_INIT_SDL_FALIURE       : SDL a eu un problème lors de SDL_Init.               *
+ *     GAME_INIT_WINDOW_FAILURE    : La fenêtre n'a pas pu être initialisée.              *
+ *     GAME_INIT_RENDERER_FAILURE  : Le renderer n'a pas pu être initialisé.              *
+ ******************************************************************************************
+ * The possible values that GAME_Init can return                                          *
+ * with the error codes associated with it:                                               *
+ *     GAME_INIT_SUCESS            : Everything is right, everything is initialized.      *
+ *     GAME_INIT_SDL_FALIURE       : SDL had a problem to initialize at SDL_Init.         *
+ *     GAME_INIT_WINDOW_FAILURE    : The window had an error during the initialization.   *
+ *     GAME_INIT_RENDERER_FAILURE  : The renderer had an error during the initialization. *
+ ******************************************************************************************
  */
 
 typedef enum {
-  GAME_SUCCESS                    =  0,
-  GAME_INIT_SDL_FALIURE           = -1,
-  GAME_WINDOW_CREATION_FAILURE    = -2,
-  GAME_RENDERER_CREATION_FAILURE  = -3
-} GAME_INIT_ReturnCode;
+  GAME_INIT_SUCCESS           =  0,
+  GAME_INIT_SDL_FALIURE       = -1,
+  GAME_INIT_WINDOW_FAILURE    = -2,
+  GAME_INIT_RENDERER_FAILURE  = -3
+  } GAME_INITCode;
 
 
 
@@ -173,7 +173,7 @@ struct GAME_AppSettings
  ****************************************************************
  */
 
-GAME_INIT_ReturnCode GAME_Init(GAME_Game *game, GAME_AppSettings &settings);
+GAME_INIT_ReturnCode GAME_Init(GAME_Game &game, GAME_AppSettings &settings);
 
 
 
